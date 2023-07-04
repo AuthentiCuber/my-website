@@ -7,10 +7,14 @@
    --accent: #1b3c7e;
 }
 
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
 html,
 body {
-   box-sizing: border-box;
-
    background: radial-gradient(var(--accent) 6%, var(--background) 0);
    background-position: 0 0;
    background-size: 5vmin 5vmin;
@@ -37,6 +41,7 @@ main a {
 
 main a:hover {
    color: var(--secondary-button);
+   opacity: 0.9;
 }
 
 article {
