@@ -1,156 +1,129 @@
 <!DOCTYPE html>
 <html lang="en-NZ">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="noindex" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Harrison O'Reibow's site" />
-        <meta name="keywords" content="Cubing, Speedcubing, Rubiks Cube" />
-        <meta name="author" content="Harrison O'Reibow" />
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="robots" content="noindex" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Harrison O'Reibow's speedcubing site" />
+      <meta name="keywords" content="Cubing, Speedcubing, Rubiks Cube" />
+      <meta name="author" content="Harrison O'Reibow" />
 
-        <!--Linked css-->
-        <link rel="stylesheet" href="./styles.css" />
-        <!--Title icon-->
-        <link rel="icon" href="./Images/Circle.svg" type="image/x-icon" />
-        <title>Method Dev Tools | Harrison O</title>
-    </head>
-    <body>
-        <header>
-            <h1>Harrison O'Reibow</h1>
-            <nav>
-                <a href="./index.html">Home</a>
-                <a class="active">Method Dev Tools</a>
-            </nav>
-        </header>
-        <main>
-            <h1>Method Development Tools</h1>
+      <!--Linked css-->
+      <link rel="stylesheet" href="./styles.css" />
+      <!--Title icon-->
+      <link rel="icon" href="./Images/Circle.svg" type="image/x-icon" />
+      <title>Method Dev Tools | Harrison O</title>
+   </head>
+   <body>
+      <header>
+         <h1>Harrison O'Reibow</h1>
+         <nav>
+            <a href="./index.html">Home</a>
+            <a class="active">Method Dev Tools</a>
+         </nav>
+      </header>
+      <main>
+         <h1>Method Development Tools</h1>
 
+         <p>I have discovered some useful tools and programs to help with the method development process.</p>
+
+         <div class="break"></div>
+
+         <!--Constraint Solver-->
+         <h2>
+            <a href="https://www.mzrg.com/js/positions/" target="_blank">3x3 Constraint Solver</a>
+         </h2>
+         <div class="centered-items">
+            <img src="./Images/ConstraintSolver.png" alt="The Constraint Solver interface" style="height: 300px" />
+         </div>
+         <div style="flex-grow: 2; padding: 1em">
             <p>
-                I have discovered some useful tools and programs to help with the method development process.
+               This tool by Michael Gottlieb can generate every possible permutation that satisfies constraints. Clicking the 'help?' button will show a full
+               tutorial if you scroll down.
             </p>
+            <p>
+               Put the constraints in the box, set the display style to Visualcube, click generate, then copy and paste each link into a new tab to see all the
+               cases.
+            </p>
+            <p>
+               Note: You can even use this for 2x2 by setting the constraints to be
+               <abbr title="Edge Orientation">EO</abbr>
+               and
+               <abbr title="Edge Permutation">EP</abbr>.
+            </p>
+         </div>
 
-            <div class="break"></div>
+         <div class="break"></div>
 
-            <div class="flex-container">
-                <!--Constraint Solver-->
-                <h2>
-                    <a href="https://www.mzrg.com/js/positions/" target="_blank">3x3 Constraint Solver</a>
-                </h2>
-                <div class="centered-items">
-                    <img
-                        src="./Images/ConstraintSolver.png"
-                        alt="The Constraint Solver interface"
-                        style="height: 300px"
-                    />
-                </div>
-                <div style="flex-grow: 2; padding: 1em">
-                    <p>
-                        This tool by Michael Gottlieb can generate every possible permutation that satisfies
-                        constraints. Clicking the 'help?' button will show a full tutorial if you scroll down.
-                    </p>
-                    <p>
-                        Put the constraints in the box, set the display style to Visualcube, click generate,
-                        then copy and paste each link into a new tab to see all the cases.
-                    </p>
-                    <p>
-                        Note: You can even use this for 2x2 by setting the constraints to be
-                        <abbr title="Edge Orientation">EO</abbr>
-                        and
-                        <abbr title="Edge Permutation">EP</abbr>.
-                    </p>
-                </div>
+         <!--Cube Explorer-->
+         <h2>
+            <a href="http://kociemba.org/cube.htm" target="_blank">Cube Explorer</a>
+         </h2>
+         <div class="centered-items">
+            <img src="./Images/CubeExplorer.png" alt="Cube Explorer" style="height: 300px" />
+         </div>
+         <div style="flex-grow: 2; padding: 1em">
+            <p>
+               Use this program by Herbert Koceimba to generate algorithms. Click on a center piece to select that colour, then click on any other peice to
+               paint. Ctrl-click to set orientation, Shift-click for permutation.
+            </p>
+            <p>
+               Click 'Add and Solve' to generate algs that solve that case. Let it run for a few seconds, then click 'Stop Search' and scroll to the top. If one
+               of the first few isn't fingertrick friendly, select all of them and paste them into a Google Doc. You can then use Ctrl+F to search for common
+               triggers like R U R' or R' F R.
+            </p>
+            <p>
+               Tutorials:
+               <a href="https://www.youtube.com/watch?v=uDaNGOigiKg" target="_blank">Java Cuber</a>,
+               <a href="https://www.youtube.com/watch?v=GXBFzIidbWU" target="_blank">Rowan Fortier (skip to 12:53)</a>
+            </p>
+         </div>
 
-                <div class="break"></div>
+         <div class="break"></div>
 
-                <!--Cube Explorer-->
-                <h2>
-                    <a href="http://kociemba.org/cube.htm" target="_blank">Cube Explorer</a>
-                </h2>
-                <div class="centered-items">
-                    <img src="./Images/CubeExplorer.png" alt="Cube Explorer" style="height: 300px" />
-                </div>
-                <div style="flex-grow: 2; padding: 1em">
-                    <p>
-                        Use this program by Herbert Koceimba to generate algorithms. Click on a center piece
-                        to select that colour, then click on any other peice to paint. Ctrl-click to set
-                        orientation, Shift-click for permutation.
-                    </p>
-                    <p>
-                        Click 'Add and Solve' to generate algs that solve that case. Let it run for a few
-                        seconds, then click 'Stop Search' and scroll to the top. If one of the first few isn't
-                        fingertrick friendly, select all of them and paste them into a Google Doc. You can
-                        then use Ctrl+F to search for common triggers like R U R' or R' F R.
-                    </p>
-                    <p>
-                        Tutorials:
-                        <a href="https://www.youtube.com/watch?v=uDaNGOigiKg" target="_blank">Java Cuber</a>,
-                        <a href="https://www.youtube.com/watch?v=GXBFzIidbWU" target="_blank"
-                            >Rowan Fortier (skip to 12:53)</a
-                        >
-                    </p>
-                </div>
+         <!--Visualcube-->
+         <h2>
+            <a href="http://cube.rider.biz/visualcube.php" target="_blank"> Visualcube </a>
+         </h2>
+         <div class="centered-items">
+            <img src="./Images/visualcube.png" alt="An Image generated with visualcube" style="height: 300px" />
+         </div>
+         <div style="flex-grow: 2; padding: 1em">
+            <p>
+               This website by Conrad Rider can generate images of any
+               <abbr title="2x2, 3x3, 4x4 etc.">NxN</abbr> puzzle from any angle with any case, using parameters you input into the address bar.
+            </p>
+            <p>
+               Tutorial:
+               <a href="https://www.youtube.com/watch?v=XQs-P3EEVXY" target="_blank"> SomeRandomCuber </a>
+            </p>
+         </div>
 
-                <div class="break"></div>
+         <div class="break"></div>
 
-                <!--Visualcube-->
-                <h2>
-                    <a href="http://cube.rider.biz/visualcube.php" target="_blank"> Visualcube </a>
-                </h2>
-                <div class="centered-items">
-                    <img
-                        src="./Images/visualcube.png"
-                        alt="An Image generated with visualcube"
-                        style="height: 300px"
-                    />
-                </div>
-                <div style="flex-grow: 2; padding: 1em">
-                    <p>
-                        This website by Conrad Rider can generate images of any
-                        <abbr title="2x2, 3x3, 4x4 etc.">NxN</abbr> puzzle from any angle with any case, using
-                        parameters you input into the address bar.
-                    </p>
-                    <p>
-                        Tutorial:
-                        <a href="https://www.youtube.com/watch?v=XQs-P3EEVXY" target="_blank">
-                            SomeRandomCuber
-                        </a>
-                    </p>
-                </div>
-
-                <div class="break"></div>
-
-                <!--Google Sheets-->
-                <h2>
-                    Google
-                    <a href="https://docs.google.com/spreadsheets" target="_blank">Sheets</a>
-                    &
-                    <a href="https://docs.google.com/" target="_blank">Docs</a>
-                </h2>
-                <div class="centered-items">
-                    <img
-                        src="./Images/Sheets.png"
-                        alt="The Google Sheets logo"
-                        style="height: 300px; padding-right: 5px"
-                    />
-                    <img
-                        src="./Images/Docs.png"
-                        alt="The Google Docs logo"
-                        style="height: 300px; padding-left: 5px"
-                    />
-                </div>
-                <div style="flex-grow: 2; padding: 1em">
-                    <p>Google Docs is very good for documenting your method. There's not much else to say.</p>
-                    <p>
-                        Google Sheets, on the other hand, has some very useful functionality. It is mainly
-                        used for PB Sheets (see mine on the welcome page) and showing algorithms.
-                    </p>
-                    <p>
-                        You can use
-                        <a href="https://pastebin.com/friL5iQb">this function</a>
-                        to show what case an algorithm solves.
-                    </p>
-                </div>
-            </div>
-        </main>
-    </body>
+         <!--Google Sheets-->
+         <h2>
+            Google
+            <a href="https://docs.google.com/spreadsheets" target="_blank">Sheets</a>
+            &
+            <a href="https://docs.google.com/" target="_blank">Docs</a>
+         </h2>
+         <div class="centered-items">
+            <img src="./Images/Sheets.png" alt="The Google Sheets logo" style="height: 300px; padding-right: 5px" />
+            <img src="./Images/Docs.png" alt="The Google Docs logo" style="height: 300px; padding-left: 5px" />
+         </div>
+         <div style="flex-grow: 2; padding: 1em">
+            <p>Google Docs is very good for documenting your method. There's not much else to say.</p>
+            <p>
+               Google Sheets, on the other hand, has some very useful functionality. It is mainly used for PB Sheets (see mine on the welcome page) and showing
+               algorithms.
+            </p>
+            <p>
+               You can use
+               <a href="https://pastebin.com/friL5iQb">this function</a>
+               to show what case an algorithm solves.
+            </p>
+         </div>
+      </main>
+   </body>
 </html>

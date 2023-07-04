@@ -13,10 +13,12 @@ body {
    background-position: 0 0;
    background-size: 5vmin 5vmin;
    background-attachment: fixed;
+
    color: var(--text);
    font-family: sans-serif;
    margin: 0;
    line-height: 1.7;
+   text-align: justify;
 }
 
 main {
@@ -35,6 +37,10 @@ main a:hover {
    color: var(--secondary-button);
 }
 
+article {
+   padding: 1em;
+}
+
 /* Typography */
 
 h1,
@@ -48,6 +54,7 @@ h2 {
 }
 
 p {
+   text-align: justify;
    font-size: 1.3em;
 }
 
@@ -143,23 +150,4 @@ nav a.active {
 
 nav a:hover:not(.active) {
    background-color: var(--primary-button);
-}
-
-/* ---------- flexbox ---------- */
-
-.flex-container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   text-align: center;
-}
-
-.centered-items {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-grow: 1;
-   padding: 1em;
 }
