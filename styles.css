@@ -27,22 +27,15 @@ main {
    padding-top: 10px;
 }
 
-p {
-   font-size: 1.3em;
-}
-
-a {
-   transition: background-color, 0.25s;
-   font-weight: bold;
-}
-
 main a {
    color: var(--accent);
 }
 
 main a:hover {
-   color: var(--accent);
+   color: var(--secondary-button);
 }
+
+/* Typography */
 
 h1,
 h2,
@@ -52,6 +45,10 @@ h3 {
 
 h2 {
    font-size: 1.8em;
+}
+
+p {
+   font-size: 1.3em;
 }
 
 .caption {
@@ -135,6 +132,8 @@ nav a {
    color: var(--background);
    border-top-left-radius: 30px;
    border-top-right-radius: 30px;
+   transition: background-color, 0.25s;
+   font-weight: bold;
 }
 
 nav a.active {
@@ -154,6 +153,7 @@ nav a:hover:not(.active) {
    justify-content: center;
    align-items: center;
    width: 100%;
+   text-align: center;
 }
 
 .centered-items {
