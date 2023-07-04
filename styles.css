@@ -24,6 +24,7 @@ main {
    display: block;
    width: min(100% - 10rem, 100ch);
    background: var(--background);
+   padding-top: 10px;
 }
 
 p {
