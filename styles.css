@@ -1,4 +1,7 @@
-/* ---------- Global styles ---------- */
+/* * =============== 
+   * Global styles 
+   * =============== */
+
 :root {
    --text: #112244;
    --background: #dcdcdc;
@@ -20,6 +23,7 @@ body {
    background-size: 5vmin 5vmin;
    background-attachment: fixed;
 
+   scroll-padding-top: 30px;
    color: var(--text);
    font-family: sans-serif;
    margin: 0;
@@ -48,7 +52,61 @@ article {
    padding: 1rem;
 }
 
-/* Typography */
+/* * =============== 
+   *     Footer 
+   * =============== */
+
+footer {
+   font-size: 0.8rem;
+   background: var(--secondary-button);
+   color: var(--background);
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   padding-bottom: 60px;
+}
+
+footer .header {
+   font-size: 1rem;
+   font-weight: 600;
+   padding-bottom: 8px;
+}
+
+footer ul {
+   padding: 0 30px;
+}
+
+footer li {
+   list-style: none;
+   overflow: hidden;
+}
+
+footer a {
+   color: var(--background);
+   text-decoration: none;
+   position: relative;
+}
+
+footer a::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: var(--background);
+
+   transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+footer a:hover::after {
+   left: 0;
+}
+
+/* * =============== 
+   *   Typography 
+   * =============== */
 
 h1,
 h2,
@@ -69,7 +127,9 @@ p {
    font-size: 1.3rem;
 }
 
-/* classes */
+/* * =============== 
+   *    Classes 
+   * =============== */
 
 .caption {
    font-size: 1rem;
@@ -91,7 +151,9 @@ p {
    padding: 1rem;
 }
 
-/* Tool tips */
+/* * =============== 
+   *    Tooltips 
+   * =============== */
 
 span[data-tool-tip] {
    cursor: help;
@@ -126,7 +188,9 @@ span[data-tool-tip]:hover::after {
    opacity: 1;
 }
 
-/* ---------- scrollbar ---------- */
+/* * =============== 
+   *   Scrollbar 
+   * =============== */
 
 ::-webkit-scrollbar {
    background-color: var(--text);
@@ -137,7 +201,9 @@ span[data-tool-tip]:hover::after {
    background-color: var(--accent);
 }
 
-/* ---------- header/nav ---------- */
+/* * =============== 
+   *   Header/Nav 
+   * =============== */
 
 header {
    text-align: center;
