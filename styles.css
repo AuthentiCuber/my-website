@@ -133,7 +133,7 @@ p {
 }
 
 /* * =============== 
-   *    Classes 
+   *   Basic stuff 
    * =============== */
 
 .caption {
@@ -147,6 +147,18 @@ p {
    position: relative;
 }
 
+.row {
+   flex-direction: row;
+}
+
+.col {
+   flex-direction: column;
+}
+
+/* * =============== 
+   *     Images 
+   * =============== */
+
 .image-wrapper {
    display: flex;
    align-items: center;
@@ -155,12 +167,8 @@ p {
    padding: 1rem;
 }
 
-.row {
-   flex-direction: row;
-}
-
-.col {
-   flex-direction: column;
+img {
+   height: min(300px, 40vw);
 }
 
 /* * =============== 
