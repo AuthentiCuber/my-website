@@ -57,7 +57,7 @@ article {
    * =============== */
 
 footer {
-   font-size: 0.8rem;
+   font-size: 1rem;
    background: var(--secondary-button);
    color: var(--background);
    padding: 10px;
@@ -68,7 +68,7 @@ footer {
 }
 
 footer .header {
-   font-size: 1rem;
+   font-size: 1.1rem;
    font-weight: 600;
    padding-bottom: 8px;
 }
@@ -79,6 +79,7 @@ footer ul {
 
 footer li {
    list-style: none;
+   padding-block: 5px;
 }
 
 footer a {
