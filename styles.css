@@ -79,13 +79,16 @@ footer ul {
 
 footer li {
    list-style: none;
-   overflow: hidden;
 }
 
 footer a {
    color: var(--background);
    text-decoration: none;
    position: relative;
+   display: block;
+   width: fit-content;
+   height: fit-content;
+   overflow: hidden;
 }
 
 footer a::after {
