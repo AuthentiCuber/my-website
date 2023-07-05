@@ -18,11 +18,7 @@
 
 html,
 body {
-   background: radial-gradient(var(--accent) 6%, var(--background) 0);
-   background-position: 0 0;
-   background-size: 5vmin 5vmin;
-   background-attachment: fixed;
-
+   scroll-behavior: smooth;
    scroll-padding-top: 30px;
    color: var(--text);
    font-family: sans-serif;
@@ -31,10 +27,15 @@ body {
    text-align: justify;
 }
 
+body {
+   background-image: radial-gradient(var(--accent) 5%, var(--background) 5%);
+   background-size: 4vw 4vw;
+}
+
 main {
    margin: 0 auto 0 auto;
    display: block;
-   width: min(100% - 10rem, 100ch);
+   width: min(100% - 3rem, 100ch);
    background: var(--background);
    padding-top: 10px;
 }
