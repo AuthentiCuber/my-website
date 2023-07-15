@@ -180,6 +180,8 @@ span[data-tool-tip] {
    position: relative;
    color: var(--accent);
    text-decoration: underline dashed var(--accent);
+   display: inline-flex;
+   justify-content: center;
 }
 
 span[data-tool-tip]::after {
@@ -190,21 +192,14 @@ span[data-tool-tip]::after {
    padding: 0.3rem;
    color: var(--background);
    border-radius: 5px;
-   bottom: 1%;
-   left: 0;
-   transform: translateX(-50%);
    white-space: nowrap;
+   bottom: 100%;
    opacity: 0;
-   transform: scale(0);
-   width: fit-content;
-   height: fit-content;
 
-   transition: bottom ease-out 0.5s, opacity ease-out 0.5s;
+   transition: opacity 0.5s ease;
 }
 
 span[data-tool-tip]:hover::after {
-   transform: scale(1);
-   bottom: 100%;
    opacity: 1;
 }
 
