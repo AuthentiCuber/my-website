@@ -70,12 +70,6 @@ footer {
    padding-bottom: 60px;
 }
 
-footer .header {
-   font-size: 1.2rem;
-   font-weight: 600;
-   padding-bottom: 11px;
-}
-
 footer ul {
    padding: 0 30px;
 }
@@ -83,6 +77,12 @@ footer ul {
 footer li {
    list-style: none;
    padding-block: 5px;
+}
+
+footer li:first-child {
+   font-size: 1.2rem;
+   font-weight: 600;
+   padding-bottom: 11px;
 }
 
 footer a {
