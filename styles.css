@@ -3,11 +3,11 @@
    * =============== */
 
 :root {
-   --text: #112244;
-   --background: #dcdcdc;
-   --primary-button: #1b3c7e;
-   --secondary-button: #303e5a;
-   --accent: #1b3c7e;
+   --text: #1c2654;
+   --background: #efefef;
+   --primary: #234182;
+   --secondary: #aac5ff;
+   --accent: #3264d1;
 }
 
 *,
@@ -30,7 +30,7 @@ body {
 }
 
 body {
-   background-image: radial-gradient(var(--accent) 5%, var(--background) 5%);
+   background-image: radial-gradient(var(--primary) 5%, var(--background) 5%);
    background-size: 4vw 4vw;
 }
 
@@ -48,11 +48,17 @@ main {
 }
 
 main a {
-   color: var(--accent);
+   color: var(--primary);
+
+   -webkit-transition: color 0.25s ease;
+   -moz-transition: color 0.25s ease;
+   -ms-transition: color 0.25s ease;
+   -o-transition: color 0.25s ease;
+   transition: color 0.25s ease;
 }
 
 main a:hover {
-   color: var(--secondary-button);
+   color: var(--accent);
    opacity: 0.9;
 }
 
@@ -66,7 +72,7 @@ article {
 
 footer {
    font-size: 1rem;
-   background: var(--secondary-button);
+   background: var(--primary);
    color: var(--background);
    padding: 10px;
    display: flex;
@@ -192,7 +198,6 @@ img {
 span[data-tool-tip] {
    cursor: help;
    position: relative;
-   color: var(--accent);
    text-decoration: underline dashed var(--accent);
    display: inline-flex;
    justify-content: center;
@@ -201,7 +206,7 @@ span[data-tool-tip] {
 span[data-tool-tip]::after {
    content: attr(data-tool-tip);
    position: absolute;
-   background: var(--secondary-button);
+   background: var(--primary);
    padding: 0.3rem;
    color: var(--background);
    border-radius: 5px;
@@ -257,7 +262,7 @@ header h1 {
 }
 
 nav {
-   background-color: var(--secondary-button);
+   background-color: var(--primary);
    display: flex;
    justify-content: center;
 }
@@ -268,7 +273,6 @@ nav * {
    text-decoration: none;
    height: inherit;
    font-size: 17px;
-   background: var(--secondary-button);
    color: var(--background);
    border-top-left-radius: 30px;
    border-top-right-radius: 30px;
