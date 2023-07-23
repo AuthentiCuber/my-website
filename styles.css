@@ -187,13 +187,17 @@ main {
 }
 
 main a {
-   color: var(--primary);
+   color: var(--accent);
+
+   -webkit-transition: color 0.25s;
+   -moz-transition: color 0.25s;
+   -ms-transition: color 0.25s;
+   -o-transition: color 0.25s;
+   transition: color 0.25s;
 }
 
-main a:is(:hover :focus) {
-   outline: transparent;
-   color: var(--accent);
-   opacity: 0.9;
+main a:hover {
+   color: var(--text);
 }
 
 article {
@@ -282,7 +286,7 @@ footer a:is(:hover, :focus)::after {
    *    Tooltips 
    * =============== */
 
-span[data-tool-tip] {
+[data-tool-tip] {
    cursor: help;
    position: relative;
    text-decoration: underline dashed var(--accent);
@@ -290,7 +294,7 @@ span[data-tool-tip] {
    justify-content: center;
 }
 
-span[data-tool-tip]::after {
+[data-tool-tip]::after {
    content: attr(data-tool-tip);
    position: absolute;
    background: var(--secondary);
@@ -310,11 +314,14 @@ span[data-tool-tip]::after {
    transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
-span[data-tool-tip]:is(:hover, :focus)::after {
-   outline: transparent;
+[data-tool-tip]:is(:hover, :focus-visible)::after {
    transform: scale(1);
    opacity: 1;
    bottom: 100%;
+}
+
+[data-tool-tip]:focus-visible {
+   outline: transparent;
 }
 
 /* * ===============
