@@ -9,9 +9,15 @@
 
       <meta name="theme-color" content="#dcdcdc" />
 
-      <!--Linked css-->
+      <!-- Font Awesome -->
+      <script src="https://kit.fontawesome.com/75d1f79d1c.js" crossorigin="anonymous"></script>
+
+      <!-- Linked css -->
       <link rel="stylesheet" href="./styles.css" />
-      <!--Title icon-->
+      <!-- inked js -->
+      <script defer src="./theme.js"></script>
+
+      <!-- Title icon -->
       <link rel="icon" href="./Images/Circle.svg" type="image/x-icon" />
       <title>Method Dev Tools | Harrison O</title>
    </head>
@@ -19,10 +25,15 @@
       <header>
          <h1>Harrison O'Reibow</h1>
          <nav>
-            <a href="./index.html">Home</a>
-            <a href="./halfturns.html">Half Turn Methods</a>
+            <a href="./index.html" tabindex="0">Home</a>
+            <a href="./halfturns.html" tabindex="0">Half Turn Methods</a>
             <div class="active">Method Dev Tools</div>
          </nav>
+
+         <button id="theme" class="col" onclick="toggleTheme();">
+            <span id="theme-button" class="fa-solid fa-moon"></span>
+            <i class="fa-solid fa-palette"></i>
+         </button>
       </header>
       <main>
          <article>
@@ -31,9 +42,7 @@
             <p>I have discovered some useful tools and programs to help with the method development process.</p>
 
             <div class="break"></div>
-
          </article>
-
 
          <!--Constraint Solver-->
          <article>
@@ -63,9 +72,7 @@
             </p>
 
             <div class="break"></div>
-
          </article>
-
 
          <!--Cube Explorer-->
          <article>
@@ -96,9 +103,7 @@
             </p>
 
             <div class="break"></div>
-
          </article>
-
 
          <!--Visualcube-->
          <article>
@@ -122,9 +127,7 @@
             </p>
 
             <div class="break"></div>
-            
          </article>
-
 
          <!--Google Sheets-->
          <article>
@@ -162,27 +165,29 @@
       <footer>
          <ul>
             <li>About</li>
-            <li><a href="./index.html#about">About Me</a></li>
-            <li><a href="./credits.html">Credits</a></li>
+            <li><a href="./index.html#about" tabindex="0">About Me</a></li>
+            <li><a href="./credits.html" tabindex="0">Credits</a></li>
             <li>
-               <a href="https://docs.google.com/spreadsheets/d/1kPzSUdBJbyROcFkWn5Qhpjgp5TaZQMddjvGdnvpGtLs/edit?usp=sharing" target="_blank">My PBs</a>
+               <a href="https://docs.google.com/spreadsheets/d/1kPzSUdBJbyROcFkWn5Qhpjgp5TaZQMddjvGdnvpGtLs/edit?usp=sharing" target="_blank" tabindex="0"
+                  >My PBs</a
+               >
             </li>
          </ul>
          <ul>
             <li>Contact</li>
             <li>
-               <a href="mailto:harrison.oreibow@gmail.com">Email</a>
+               <a href="mailto:harrison.oreibow@gmail.com" tabindex="0">Email</a>
             </li>
          </ul>
          <ul>
             <li>Find Me</li>
             <li>
-               <a href="https://github.com/AuthentiCuber" target="_blank">Github</a>
+               <a href="https://github.com/AuthentiCuber" target="_blank" tabindex="0">Github</a>
             </li>
             <li>
-               <a href="https://www.worldcubeassociation.org/persons/2021OREI01" target="_blank">WCA</a>
+               <a href="https://www.worldcubeassociation.org/persons/2021OREI01" target="_blank" tabindex="0">WCA</a>
             </li>
-            <li><a href="http://www.youtube.com/@HarrisonO" target="_blank">Youtube</a></li>
+            <li><a href="http://www.youtube.com/@HarrisonO" target="_blank" tabindex="0">Youtube</a></li>
          </ul>
       </footer>
    </body>

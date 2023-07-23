@@ -3,17 +3,31 @@
    * =============== */
 
 :root {
+   --text-fixed: #efefef;
+   --primary: #234182;
+   --secondary-fixed: #92b4ff;
+
    --text: #1c2654;
    --background: #efefef;
-   --primary: #234182;
-   --secondary: #aac5ff;
+   --secondary: #92b4ff;
    --accent: #3264d1;
+}
+
+.dark {
+   --text: #efefef;
+   --background: #1c2654;
+   --secondary: #001033;
+   --accent: #82a1e3;
 }
 
 *,
 *::before,
 *::after {
    box-sizing: border-box;
+}
+
+:focus-visible {
+   outline-offset: 5px;
 }
 
 html,
@@ -30,137 +44,8 @@ body {
 }
 
 body {
-   background-image: radial-gradient(var(--primary) 5%, var(--background) 5%);
+   background-image: radial-gradient(var(--accent) 5%, var(--background) 5%);
    background-size: 4vw 4vw;
-}
-
-main {
-   margin: 0 auto 0 auto;
-   display: block;
-   width: min(100% - 3rem, 100ch);
-   background: var(--background);
-   padding-top: 10px;
-
-   position: relative;
-   z-index: 1;
-
-   box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);
-}
-
-main a {
-   color: var(--primary);
-
-   -webkit-transition: color 0.25s ease;
-   -moz-transition: color 0.25s ease;
-   -ms-transition: color 0.25s ease;
-   -o-transition: color 0.25s ease;
-   transition: color 0.25s ease;
-}
-
-main a:hover {
-   color: var(--accent);
-   opacity: 0.9;
-}
-
-article {
-   padding: 1rem;
-}
-
-/* * =============== 
-   *     Footer 
-   * =============== */
-
-footer {
-   font-size: 1rem;
-   background: var(--primary);
-   color: var(--background);
-   padding: 10px;
-   display: flex;
-   justify-content: center;
-   align-items: start;
-   padding-bottom: 60px;
-
-   position: relative;
-   z-index: 2;
-}
-
-footer ul {
-   padding: 0 30px;
-}
-
-footer li {
-   list-style: none;
-   padding-block: 5px;
-}
-
-footer li:first-child {
-   font-size: 1.2rem;
-   font-weight: 600;
-   padding-bottom: 11px;
-}
-
-footer a {
-   color: var(--background);
-   text-decoration: none;
-   position: relative;
-   display: block;
-   width: fit-content;
-   height: fit-content;
-   overflow: hidden;
-}
-
-footer a::after {
-   content: "";
-   position: absolute;
-   bottom: 0;
-   left: -100%;
-   width: 100%;
-   height: 2px;
-   background: var(--background);
-
-   -webkit-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-   -moz-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-   -ms-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-   -o-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-   transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-}
-
-footer a:hover::after {
-   left: 0;
-}
-
-/* * =============== 
-   *   Typography 
-   * =============== */
-
-h1,
-h2,
-h3 {
-   text-align: center;
-}
-
-h1 {
-   font-size: 2.25rem;
-}
-
-h2 {
-   font-size: 1.8rem;
-}
-
-p {
-   text-align: justify;
-   font-size: 1.3rem;
-}
-
-/* * =============== 
-   *   Basic stuff 
-   * =============== */
-
-.break {
-   width: 100%;
-   height: 10px;
-   background: var(--accent);
-   position: relative;
 }
 
 .row {
@@ -169,6 +54,19 @@ p {
 
 .col {
    flex-direction: column;
+}
+
+/* * =============== 
+   *   Scrollbar 
+   * =============== */
+
+::-webkit-scrollbar {
+   background-color: var(--primary);
+   width: 25px;
+}
+
+::-webkit-scrollbar-thumb {
+   background-color: var(--secondary-fixed);
 }
 
 /* * =============== 
@@ -192,54 +90,26 @@ img {
 }
 
 /* * =============== 
-   *    Tooltips 
+   *   Typography 
    * =============== */
 
-span[data-tool-tip] {
-   cursor: help;
-   position: relative;
-   text-decoration: underline dashed var(--accent);
-   display: inline-flex;
-   justify-content: center;
+h1,
+h2,
+h3 {
+   text-align: center;
 }
 
-span[data-tool-tip]::after {
-   content: attr(data-tool-tip);
-   position: absolute;
-   background: var(--primary);
-   padding: 0.3rem;
-   color: var(--background);
-   border-radius: 5px;
-   white-space: nowrap;
-
-   bottom: 0;
-   opacity: 0;
-   transform: scale(0);
-
-   -webkit-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-   -moz-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-   -ms-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-   -o-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-   transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+h1 {
+   font-size: 2.25rem;
 }
 
-span[data-tool-tip]:hover::after {
-   transform: scale(1);
-   opacity: 1;
-   bottom: 100%;
+h2 {
+   font-size: 1.8rem;
 }
 
-/* * =============== 
-   *   Scrollbar 
-   * =============== */
-
-::-webkit-scrollbar {
-   background-color: var(--text);
-   width: 25px;
-}
-
-::-webkit-scrollbar-thumb {
-   background-color: var(--accent);
+p {
+   text-align: justify;
+   font-size: 1.3rem;
 }
 
 /* * =============== 
@@ -273,7 +143,7 @@ nav * {
    text-decoration: none;
    height: inherit;
    font-size: 17px;
-   color: var(--background);
+   color: var(--text-fixed);
    border-top-left-radius: 30px;
    border-top-right-radius: 30px;
 
@@ -287,13 +157,221 @@ nav * {
    opacity: 1;
 }
 
-nav *.active {
+nav .active {
    background-color: var(--background);
    color: var(--text);
 }
 
-nav *:hover:not(.active) {
-   background-color: var(--background);
-   color: var(--text);
+nav :is(:hover, :focus):not(.active) {
+   outline: transparent;
+   background-color: var(--text-fixed);
+   color: var(--primary);
    opacity: 0.7;
+}
+
+/* * =============== 
+   *    Content 
+   * =============== */
+
+main {
+   margin: 0 auto 0 auto;
+   display: block;
+   width: min(100% - 3rem, 100ch);
+   background: var(--background);
+   padding-top: 10px;
+
+   position: relative;
+   z-index: 1;
+
+   box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.5);
+}
+
+main a {
+   color: var(--primary);
+}
+
+main a:is(:hover :focus) {
+   outline: transparent;
+   color: var(--accent);
+   opacity: 0.9;
+}
+
+article {
+   padding: 1rem;
+}
+
+/* * =============== 
+   *     Footer 
+   * =============== */
+
+footer {
+   font-size: 1rem;
+   background: var(--primary);
+   color: var(--text-fixed);
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: start;
+   padding-bottom: 60px;
+
+   position: relative;
+   z-index: 2;
+}
+
+footer ul {
+   padding: 0 30px;
+}
+
+footer li {
+   list-style: none;
+   padding-block: 5px;
+}
+
+footer li:first-child {
+   font-size: 1.2rem;
+   font-weight: 600;
+   padding-bottom: 11px;
+}
+
+footer a {
+   color: var(--text-fixed);
+   text-decoration: none;
+   position: relative;
+   display: block;
+   width: fit-content;
+   height: fit-content;
+   overflow: hidden;
+}
+
+footer a::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: var(--text-fixed);
+
+   -webkit-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+   -moz-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+   -ms-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+   -o-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+   transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+footer a:is(:hover, :focus) {
+   outline: transparent;
+}
+
+footer a:is(:hover, :focus)::after {
+   left: 0;
+}
+
+/* * =============== 
+   *   Basic stuff 
+   * =============== */
+
+.break {
+   width: 100%;
+   height: 10px;
+   background: var(--accent);
+   position: relative;
+}
+
+/* * =============== 
+   *    Tooltips 
+   * =============== */
+
+span[data-tool-tip] {
+   cursor: help;
+   position: relative;
+   text-decoration: underline dashed var(--accent);
+   display: inline-flex;
+   justify-content: center;
+}
+
+span[data-tool-tip]::after {
+   content: attr(data-tool-tip);
+   position: absolute;
+   background: var(--secondary);
+   padding: 0.3rem;
+   color: var(--text);
+   border-radius: 5px;
+   white-space: nowrap;
+
+   bottom: 0;
+   opacity: 0;
+   transform: scale(0);
+
+   -webkit-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+   -moz-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+   -ms-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+   -o-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+   transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+span[data-tool-tip]:is(:hover, :focus)::after {
+   outline: transparent;
+   transform: scale(1);
+   opacity: 1;
+   bottom: 100%;
+}
+
+/* * ===============
+   * Theme switcher 
+   * =============== */
+
+#theme {
+   position: fixed;
+   top: -40px;
+   right: 30px;
+   width: 50px;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   border: none;
+   margin: 0;
+   padding: 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   background: var(--accent);
+   color: var(--background);
+   font-weight: 600;
+
+   -webkit-transition: top 0.4s ease-out;
+   -moz-transition: top 0.4s ease-out;
+   -ms-transition: top 0.4s ease-out;
+   -o-transition: top 0.4s ease-out;
+   transition: top 0.4s ease-out;
+}
+
+#theme:is(:hover, :focus-visible) {
+   top: 0;
+}
+
+#theme * {
+   width: 100%;
+   display: grid;
+   place-items: center;
+}
+
+#theme :first-child {
+   border-bottom: 2px solid var(--accent);
+   color: var(--text);
+   background: var(--secondary);
+   height: 40px;
+   font-size: 1.6rem;
+   cursor: pointer;
+
+   -webkit-transition: background 0.25s, color 0.25s;
+   -moz-transition: background 0.25s, color 0.25s;
+   -ms-transition: background 0.25s, color 0.25s;
+   -o-transition: background 0.25s, color 0.25s;
+   transition: background 0.25s, color 0.25s;
+}
+
+#theme :last-child {
+   height: 20px;
 }
