@@ -12,11 +12,10 @@ if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").match
    toggleTheme();
 }
 
-const links = document.getElementsByTagName("a");
 const tooltips = document.querySelectorAll("[data-tool-tip]");
 
 const addTabIndexes = () => {
-   Array.from(links).concat(Array.from(tooltips)).forEach(function (link) {
+   Array.from(tooltips).forEach(function (link) {
       link.setAttribute("tabindex", "0");
    });
 };
