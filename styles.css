@@ -2,6 +2,8 @@
    * Global styles 
    * =============== */
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 :root {
    --text-fixed: #efefef;
    --primary: #234182;
@@ -35,7 +37,7 @@ body {
    scroll-behavior: smooth;
    scroll-padding-top: 30px;
    color: var(--text);
-   font-family: sans-serif;
+   font-family: "Open Sans", sans-serif;
    margin: 0;
    padding: 0;
    line-height: 1.7;
