@@ -74,11 +74,14 @@ body {
    * =============== */
 
 figure {
-   display: flex;
-   align-items: center;
-   justify-content: center;
    text-align: center;
-   padding: 1rem;
+   margin: 1rem auto;
+   width: fit-content;
+   height: fit-content;
+}
+
+img:not(:only-of-type) {
+   width: min(40%, 250px);
 }
 
 figcaption {
@@ -86,7 +89,7 @@ figcaption {
 }
 
 img {
-   height: min(300px, 40vw);
+   width: min(100%, 400px);
 }
 
 /* * =============== 
@@ -297,9 +300,9 @@ footer a:is(:hover, :focus)::after {
 [data-tool-tip]::after {
    content: attr(data-tool-tip);
    position: absolute;
-   background: var(--secondary);
+   background: var(--primary);
    padding: 0.3rem;
-   color: var(--text);
+   color: var(--text-fixed);
    border-radius: 5px;
    white-space: nowrap;
 
