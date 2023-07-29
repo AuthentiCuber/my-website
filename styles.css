@@ -132,7 +132,7 @@ header {
 
 header h1 {
    font-size: 50px;
-   margin: 0px;
+   margin: 0;
    padding: 20px;
 }
 
@@ -359,7 +359,7 @@ footer a:is(:hover, :focus)::after {
    transition: top 0.4s ease-out;
 }
 
-#theme:is(:hover, :focus-visible) {
+#theme:is(:has(:focus-visible), :hover) {
    top: 0;
 }
 
@@ -370,6 +370,7 @@ footer a:is(:hover, :focus)::after {
 }
 
 #theme :first-child {
+   border: none;
    border-bottom: 2px solid var(--accent);
    color: var(--text);
    background: var(--secondary);
