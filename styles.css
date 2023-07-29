@@ -13,6 +13,8 @@
    --background: #efefef;
    --secondary: #92b4ff;
    --accent: #3264d1;
+
+   font-size: min(1rem, 4vw);
 }
 
 .dark {
@@ -29,7 +31,7 @@
 }
 
 :focus-visible {
-   outline-offset: 5px;
+   outline-offset: 3px;
 }
 
 html,
@@ -147,7 +149,7 @@ nav * {
    padding: 14px 16px;
    text-decoration: none;
    height: inherit;
-   font-size: 17px;
+   font-size: 1rem;
    color: var(--text-fixed);
    border-top-left-radius: 30px;
    border-top-right-radius: 30px;
@@ -228,7 +230,7 @@ footer {
 }
 
 footer ul {
-   padding: 0 30px;
+   padding: 0 4vw;
 }
 
 footer li {
@@ -282,7 +284,7 @@ footer a:is(:hover, :focus)::after {
 
 .break {
    width: 100%;
-   height: 10px;
+   height: 1vw;
    background: var(--accent);
    position: relative;
 }
@@ -294,7 +296,8 @@ footer a:is(:hover, :focus)::after {
 [data-tool-tip] {
    cursor: help;
    position: relative;
-   text-decoration: underline dashed var(--accent);
+   color: var(--accent);
+   font-style: italic;
    display: inline-flex;
    justify-content: center;
 }
@@ -323,10 +326,6 @@ footer a:is(:hover, :focus)::after {
    transform: scale(1);
    opacity: 1;
    bottom: 100%;
-}
-
-[data-tool-tip]:focus-visible {
-   outline: transparent;
 }
 
 /* * ===============
