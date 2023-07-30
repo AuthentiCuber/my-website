@@ -10,10 +10,16 @@
       <meta name="theme-color" content="#dcdcdc" />
 
       <!-- Font Awesome -->
-      <script src="https://kit.fontawesome.com/75d1f79d1c.js" crossorigin="anonymous"></script>
+      <script defer src="https://kit.fontawesome.com/75d1f79d1c.js" crossorigin="anonymous"></script>
 
       <!-- Linked css -->
       <link rel="stylesheet" href="./styles.css" />
+
+      <!-- Open Sans font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+
       <!-- inked js -->
       <script defer src="./scripts.js"></script>
 
@@ -33,8 +39,12 @@
             <a href="./tools.html">Method Dev Tools</a>
          </nav>
 
-         <div id="theme" class="col" >
-            <button id="theme-button" class="fa-solid fa-moon" onclick="toggleTheme();"></button>
+         <div id="theme" class="col">
+            <button
+               aria-label="Theme button"
+               class="fa-solid fa-moon"
+               onclick="toggleTheme();"
+            ></button>
             <i class="fa-solid fa-palette"></i>
          </div>
       </header>
@@ -108,9 +118,8 @@
             </li>
             <li>
                <a href="https://www.youtube.com/@HarrisonO" target="_blank">Youtube</a>
-            <li><a href="https://codepen.io/Harrison-OReibow" target="_blank">Codepen</a></li>
-
             </li>
+            <li><a href="https://codepen.io/Harrison-OReibow" target="_blank">Codepen</a></li>
          </ul>
       </footer>
    </body>
