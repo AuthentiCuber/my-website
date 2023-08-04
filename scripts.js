@@ -1,4 +1,4 @@
-const icon = document.getElementsByClassName("fa-solid")[0];
+const icon = document.getElementsByClassName("fa-moon")[0];
 const body = document.body;
 
 const setTheme = (theme) => {

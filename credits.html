@@ -23,7 +23,7 @@
          onload="this.onload=null;this.rel='stylesheet'"
       />
 
-      <!-- inked js -->
+      <!-- Linked js -->
       <script defer src="./scripts.js"></script>
 
       <!-- Favicon -->
@@ -37,13 +37,27 @@
       <header>
          <h1>Harrison O'Reibow</h1>
          <nav>
-            <a href="./index.html">Home</a>
-            <a href="halfturns.html">Half Turn Methods</a>
-            <a href="./tools.html">Method Dev Tools</a>
+            <button aria-label="Open Menu">
+               <i class="fa-solid fa-bars"></i>
+               <span>Menu</span>
+            </button>
+            <menu tabindex="-1">
+               <button aria-label="Close Menu">
+                  <span>Close</span>
+                  <i class="fa-solid fa-xmark"></i>
+               </button>
+               <a href="./index.html">Home</a>
+               <a href="./halfturns.html">Half Turn Methods</a>
+               <a href="./tools.html">Method Dev Tools</a>
+            </menu>
          </nav>
 
          <div id="theme" class="col">
-            <button aria-label="Theme button" class="fa-solid fa-moon" onclick="toggleTheme();"></button>
+            <button
+               aria-label="Theme button"
+               class="fa-solid fa-moon"
+               onclick="toggleTheme();"
+            ></button>
             <i class="fa-solid fa-palette"></i>
          </div>
       </header>
