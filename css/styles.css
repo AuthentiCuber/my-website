@@ -80,7 +80,9 @@ body {
 figure {
    text-align: center;
    margin: 1rem auto;
+   width: -moz-fit-content;
    width: fit-content;
+   height: -moz-fit-content;
    height: fit-content;
 }
 
@@ -126,14 +128,21 @@ p {
 header {
    text-align: center;
    background-color: transparent;
-   user-select: none;
+
+   -webkit-user-select: none;
+
+      -moz-user-select: none;
+
+           user-select: none;
 
    position: relative;
    z-index: 2;
 }
 
-header h1 {
-   font-size: 50px;
+#banner {
+   font-size: 3rem;
+   display: block;
+   font-weight: bold;
    margin: 0;
    padding: 20px;
 }
@@ -157,11 +166,6 @@ menu {
    height: var(--nav-height);
    margin: 0;
    padding: 0;
-
-   -webkit-transition: left 0.5s ease-out;
-   -moz-transition: left 0.5s ease-out;
-   -ms-transition: left 0.5s ease-out;
-   -o-transition: left 0.5s ease-out;
    transition: left 0.5s ease-out;
 }
 
@@ -186,10 +190,6 @@ menu .active {
 }
 
 nav :is(a, button) {
-   -webkit-transition: background-color 0.25s, color 0.25s, opacity 0.25s;
-   -moz-transition: background-color 0.25s, color 0.25s, opacity 0.25s;
-   -ms-transition: background-color 0.25s, color 0.25s, opacity 0.25s;
-   -o-transition: background-color 0.25s, color 0.25s, opacity 0.25s;
    transition: background-color 0.25s, color 0.25s, opacity 0.25s;
    cursor: pointer;
 }
@@ -264,10 +264,6 @@ main {
 main a {
    color: var(--accent);
 
-   -webkit-transition: color 0.25s;
-   -moz-transition: color 0.25s;
-   -ms-transition: color 0.25s;
-   -o-transition: color 0.25s;
    transition: color 0.25s;
 }
 
@@ -290,7 +286,7 @@ footer {
    padding: 10px;
    display: flex;
    justify-content: center;
-   align-items: start;
+   align-items: flex-start;
    padding-bottom: 60px;
 
    position: relative;
@@ -317,7 +313,9 @@ footer a {
    text-decoration: none;
    position: relative;
    display: block;
+   width: -moz-fit-content;
    width: fit-content;
+   height: -moz-fit-content;
    height: fit-content;
    overflow: hidden;
 }
@@ -331,10 +329,6 @@ footer a::after {
    height: 2px;
    background: var(--text-fixed);
 
-   -webkit-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-   -moz-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-   -ms-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-   -o-transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
    transition: left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
@@ -372,6 +366,7 @@ footer a:is(:hover, :focus-visible)::after {
 
 [data-tool-tip]::after {
    content: attr(data-tool-tip);
+   font-style: normal;
    position: absolute;
    background: var(--primary);
    padding: 0.3rem;
@@ -383,10 +378,6 @@ footer a:is(:hover, :focus-visible)::after {
    opacity: 0;
    transform: scale(0);
 
-   -webkit-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-   -moz-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-   -ms-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-   -o-transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
    transition: bottom 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
 }
 
@@ -419,10 +410,6 @@ footer a:is(:hover, :focus-visible)::after {
    color: var(--background);
    font-weight: 600;
 
-   -webkit-transition: top 0.4s ease-out;
-   -moz-transition: top 0.4s ease-out;
-   -ms-transition: top 0.4s ease-out;
-   -o-transition: top 0.4s ease-out;
    transition: top 0.4s ease-out;
 }
 
@@ -445,10 +432,6 @@ footer a:is(:hover, :focus-visible)::after {
    font-size: 1.6rem;
    cursor: pointer;
 
-   -webkit-transition: background 0.25s, color 0.25s;
-   -moz-transition: background 0.25s, color 0.25s;
-   -ms-transition: background 0.25s, color 0.25s;
-   -o-transition: background 0.25s, color 0.25s;
    transition: background 0.25s, color 0.25s;
 }
 
