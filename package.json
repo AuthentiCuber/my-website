@@ -1,20 +1,20 @@
 {
-  "name": "my-website-2.0",
-  "version": "1.0.0",
-  "description": "My personal website!",
-  "main": "scripts.js",
-  "scripts": {
-    "postcss:watch": "postcss css/src/styles.css --dir css -w"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "cssnano": "^6.0.1",
-    "postcss": "^8.4.27",
-    "postcss-cli": "^10.1.0",
-    "postcss-nesting": "^12.0.0",
-    "postcss-scrollbar": "^0.5.1"
-  }
+   "name": "my-website-2.0",
+   "version": "1.0.0",
+   "description": "My personal website!",
+   "main": "scripts.js",
+   "scripts": {
+      "postcss:watch": "postcss src/css/styles.css -d dist/css -m -w"
+   },
+   "keywords": [],
+   "author": "",
+   "license": "ISC",
+   "devDependencies": {
+      "autoprefixer": "^10.4.14",
+      "cssnano": "^6.0.1",
+      "postcss": "^8.4.27",
+      "postcss-cli": "^10.1.0",
+      "postcss-nesting": "^12.0.0",
+      "postcss-scrollbar": "^0.5.1"
+   }
 }

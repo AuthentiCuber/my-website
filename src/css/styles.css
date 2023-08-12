@@ -8,7 +8,7 @@
    font-family: "Open Sans";
    font-style: normal;
    font-weight: 400;
-   src: url("../fonts/open-sans-v35-latin-regular.woff2") format("woff2");
+   src: url("../../fonts/open-sans-v35-latin-regular.woff2") format("woff2");
 }
 /* open-sans-600 */
 @font-face {
@@ -16,7 +16,7 @@
    font-family: "Open Sans";
    font-style: normal;
    font-weight: 600;
-   src: url("../fonts/open-sans-v35-latin-600.woff2") format("woff2");
+   src: url("../../fonts/open-sans-v35-latin-600.woff2") format("woff2");
 }
 /* open-sans-700 - bold */
 @font-face {
@@ -24,7 +24,7 @@
    font-family: "Open Sans";
    font-style: normal;
    font-weight: 700;
-   src: url("../fonts/open-sans-v35-latin-700.woff2") format("woff2");
+   src: url("../../fonts/open-sans-v35-latin-700.woff2") format("woff2");
 }
 
 /* * =============== 
