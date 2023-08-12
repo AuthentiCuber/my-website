@@ -14,9 +14,10 @@ const setTheme = (theme) => {
 };
 
 const toggleTheme = () => {
-   setTheme(localStorage.theme == "light" ? "dark" : "light")
-}
+   setTheme(localStorage.theme == "light" ? "dark" : "light");
+};
 
+setTheme(body.className);
 
 const tooltips = document.querySelectorAll("[data-tool-tip]");
 
