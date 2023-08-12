@@ -4,7 +4,7 @@
    "description": "My personal website!",
    "main": "scripts.js",
    "scripts": {
-      "postcss:watch": "postcss src/css/styles.css -d dist/css -m -w"
+      "postcss:watch": "postcss src/css/styles.pcss -o dist/css/styles.css -m -w"
    },
    "keywords": [],
    "author": "",
