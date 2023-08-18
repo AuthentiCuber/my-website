@@ -4,7 +4,7 @@
    "description": "My personal website!",
    "main": "scripts.js",
    "scripts": {
-      "postcss:watch": "postcss src/css/styles.pcss -o dist/css/styles.css -m -w"
+      "postcss:watch": "postcss src/css/styles.css -o dist/css/styles.css -m -w"
    },
    "keywords": [],
    "author": "",
@@ -15,6 +15,9 @@
       "postcss": "^8.4.27",
       "postcss-cli": "^10.1.0",
       "postcss-nesting": "^12.0.0",
-      "postcss-scrollbar": "^0.5.1"
+      "postcss-scrollbar": "^0.5.1",
+      "prettier": "^3.0.1",
+      "stylelint": "^15.10.2",
+      "stylelint-config-standard": "^34.0.0"
    }
 }
