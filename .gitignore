@@ -2,6 +2,3 @@ node_modules/
 
 .stylelintignore
 .stylelintrc.json
-
-src/
-*.css.map
