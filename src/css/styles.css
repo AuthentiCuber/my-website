@@ -158,33 +158,33 @@ header {
    & nav {
       height: var(--nav-height);
       text-align: center;
+   }
       
-      & a {
-         text-decoration: none;
-         color: inherit;
-         height: 100%;
-         width: 100%;
-         display: grid;
-         place-items: center;
-         padding-inline: 10px;
+   & a {
+      text-decoration: none;
+      color: inherit;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      padding-inline: 10px;
          
-      }
+   }
 
-      [aria-current="page"] {
-         background-color: var(--background);
-         color: var(--text);
-      }
+   [aria-current="page"] {
+      background-color: var(--background);
+      color: var(--text);
+   }
       
-      & li {
-         height: 100%;
-         display: grid;
-         place-items: center;
+   & li {
+      height: 100%;
+      display: grid;
+      place-items: center;
 
-         transition: background-color 250ms ease;
+      transition: background-color 250ms ease;
 
-         &:not(.logo, [aria-current="page"]):hover {
-            background-color: color-mix(in srgb, var(--primary) 80%, var(--secondary-fixed));
-         }
+      &:not(.logo, [aria-current="page"]):hover {
+         background-color: color-mix(in srgb, var(--primary) 80%, var(--secondary-fixed));
       }
    }
 
@@ -231,9 +231,20 @@ header {
          width: 15rem;
          font-size: 1.4rem;
          flex-direction: column;
-         background-color: var(--secondary);
+         background-color: color-mix(in srgb, var(--secondary) , var(--primary) 70%);
 
          transition: translate 250ms ease;
+
+         &::after {
+            content: "";
+            position: absolute;
+            z-index: -2;
+            inset: 0;
+            box-shadow: 20px 0 20px 20px rgba(0 0 0 / 0.5);
+            opacity: 0;
+
+            transition: opacity 350ms linear;
+         }
       }
       
       & li {
@@ -267,6 +278,10 @@ header {
    header menu:focus,
    header menu:has(:not(.close-menu):focus) {
       translate: 0;
+
+      &::after {
+         opacity: 1;
+      }
    }
 }
 
