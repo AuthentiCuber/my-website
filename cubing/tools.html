@@ -18,32 +18,32 @@
             crossorigin="anonymous"></script>
 
         <!-- Linked css -->
-        <link rel="preload" as="style" href="./dist/css/styles.css" />
-        <link rel="stylesheet" href="./dist/css/styles.css" />
+        <link rel="preload" as="style" href="../dist/css/styles.css" />
+        <link rel="stylesheet" href="../dist/css/styles.css" />
 
         <!-- Linked js -->
-        <script defer src="./js/main.js"></script>
+        <script defer src="../js/main.js"></script>
 
         <!-- Favicon -->
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="./assets/favicon/apple-touch-icon.png" />
+            href="../assets/favicon/apple-touch-icon.png" />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="./assets/favicon/favicon-32x32.png" />
+            href="../assets/favicon/favicon-32x32.png" />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="./assets/favicon/favicon-16x16.png" />
+            href="../assets/favicon/favicon-16x16.png" />
 
         <title>Method Dev Tools | Harrison O</title>
     </head>
     <body>
-        <script src="./js/loadtheme.js"></script>
+        <script src="../js/loadtheme.js"></script>
 
         <header>
             <nav>
@@ -52,13 +52,17 @@
                     <span>Menu</span>
                 </button>
                 <menu tabindex="-1">
-                    <button aria-label="Close Menu">
-                        <span>Close</span>
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                    <a href="./index.html">Home</a>
-                    <a href="./cubing/halfturns.html">Half Turn Methods</a>
-                    <div class="active">Method Dev Tools</div>
+                    <li class="logo">
+                        <img
+                            src="../assets/favicon/android-chrome-512x512.png"
+                            alt="logo" />
+                        <button class="fa-solid fa-xmark close-menu"></button>
+                    </li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="../cubing/halfturns.html">Half Turn Methods</a>
+                    </li>
+                    <li aria-current="page">Method Dev Tools</li>
                 </menu>
             </nav>
 
