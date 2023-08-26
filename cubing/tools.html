@@ -1,221 +1,291 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-NZ">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="description" content="Harrison O'Reibow's speedcubing site" />
-      <meta name="keywords" content="Cubing, Speedcubing, Rubiks Cube" />
-      <meta name="author" content="Harrison O'Reibow" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Harrison O'Reibow's speedcubing site" />
+        <meta name="keywords" content="Cubing, Speedcubing, Rubiks Cube" />
+        <meta name="author" content="Harrison O'Reibow" />
 
-      <meta name="theme-color" content="#dcdcdc" />
+        <meta name="theme-color" content="#dcdcdc" />
 
-      <!-- Font Awesome -->
-      <script defer src="https://kit.fontawesome.com/75d1f79d1c.js" crossorigin="anonymous"></script>
+        <!-- Font Awesome -->
+        <script
+            defer
+            src="https://kit.fontawesome.com/75d1f79d1c.js"
+            crossorigin="anonymous"></script>
 
-      <!-- Linked css -->
-      <link rel="preload" as="style" href="./dist/css/styles.css" />
-      <link rel="stylesheet" href="./dist/css/styles.css" />
+        <!-- Linked css -->
+        <link rel="preload" as="style" href="./dist/css/styles.css" />
+        <link rel="stylesheet" href="./dist/css/styles.css" />
 
-      <!-- Linked js -->
-      <script defer src="./js/main.js"></script>
+        <!-- Linked js -->
+        <script defer src="./js/main.js"></script>
 
-      <!-- Favicon -->
-      <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png" />
 
-      <title>Method Dev Tools | Harrison O</title>
-   </head>
-   <body>
-      <script src="./js/loadtheme.js"></script>
+        <title>Method Dev Tools | Harrison O</title>
+    </head>
+    <body>
+        <script src="./js/loadtheme.js"></script>
 
-      <header>
-         <nav>
-            <button aria-label="Open Menu">
-               <i class="fa-solid fa-bars"></i>
-               <span>Menu</span>
-            </button>
-            <menu tabindex="-1">
-               <button aria-label="Close Menu">
-                  <span>Close</span>
-                  <i class="fa-solid fa-xmark"></i>
-               </button>
-               <a href="./index.html">Home</a>
-               <a href="./halfturns.html">Half Turn Methods</a>
-               <div class="active">Method Dev Tools</div>
-            </menu>
-         </nav>
+        <header>
+            <nav>
+                <button aria-label="Open Menu">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Menu</span>
+                </button>
+                <menu tabindex="-1">
+                    <button aria-label="Close Menu">
+                        <span>Close</span>
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                    <a href="./index.html">Home</a>
+                    <a href="./cubing/halfturns.html">Half Turn Methods</a>
+                    <div class="active">Method Dev Tools</div>
+                </menu>
+            </nav>
 
-         <div id="theme" class="col">
-            <button
-               aria-label="Theme button"
-               class="fa-solid fa-moon"
-               onclick="toggleTheme();"
-            ></button>
-            <i class="fa-solid fa-palette"></i>
-         </div>
-      </header>
-      <main>
-         <article>
-            <h1>Method Development Tools</h1>
+            <div id="theme" class="col">
+                <button
+                    aria-label="Theme button"
+                    class="fa-solid fa-moon"
+                    onclick="toggleTheme();"></button>
+                <i class="fa-solid fa-palette"></i>
+            </div>
+        </header>
+        <main>
+            <article>
+                <h1>Method Development Tools</h1>
 
-            <p>
-               I have discovered some useful tools and programs to help with the method development
-               process.
-            </p>
+                <p>
+                    I have discovered some useful tools and programs to help
+                    with the method development process.
+                </p>
 
-            <div class="break"></div>
-         </article>
+                <div class="break"></div>
+            </article>
 
-         <!--Constraint Solver-->
-         <article>
-            <h2>
-               <a href="https://www.mzrg.com/js/positions/" target="_blank">3x3 Constraint Solver</a>
-            </h2>
-            <figure>
-               <img src="./assets/img/ConstraintSolver.webp" alt="The Constraint Solver interface" />
-               <figcaption>The Constraint Solver interface</figcaption>
-            </figure>
+            <!--Constraint Solver-->
+            <article>
+                <h2>
+                    <a href="https://www.mzrg.com/js/positions/" target="_blank"
+                        >3x3 Constraint Solver</a
+                    >
+                </h2>
+                <figure>
+                    <img
+                        src="./assets/img/ConstraintSolver.webp"
+                        alt="The Constraint Solver interface" />
+                    <figcaption>The Constraint Solver interface</figcaption>
+                </figure>
 
-            <p>
-               This tool by Michael Gottlieb can generate every possible permutation that satisfies
-               constraints. Clicking the 'help?' button will show a full tutorial if you scroll down.
-            </p>
-            <p>
-               Put the constraints in the box, set the display style to Visualcube, click generate,
-               then copy and paste each link into a new tab to see all the cases.
-            </p>
-            <p>
-               Note: You can even use this for 2x2 by setting the constraints to be
-               <span data-tool-tip="Edge Orientation">EO</span>
-               and
-               <span data-tool-tip="Edge Permutation">EP</span>.
-            </p>
+                <p>
+                    This tool by Michael Gottlieb can generate every possible
+                    permutation that satisfies constraints. Clicking the 'help?'
+                    button will show a full tutorial if you scroll down.
+                </p>
+                <p>
+                    Put the constraints in the box, set the display style to
+                    Visualcube, click generate, then copy and paste each link
+                    into a new tab to see all the cases.
+                </p>
+                <p>
+                    Note: You can even use this for 2x2 by setting the
+                    constraints to be
+                    <span data-tool-tip="Edge Orientation">EO</span>
+                    and
+                    <span data-tool-tip="Edge Permutation">EP</span>.
+                </p>
 
-            <div class="break"></div>
-         </article>
+                <div class="break"></div>
+            </article>
 
-         <!--Cube Explorer-->
-         <article>
-            <h2>
-               <a href="http://kociemba.org/cube.htm" target="_blank">Cube Explorer</a>
-            </h2>
-            <figure>
-               <img src="./assets/img/CubeExplorer.webp" alt="Cube Explorer" />
-               <figcaption>Cube Explorer</figcaption>
-            </figure>
+            <!--Cube Explorer-->
+            <article>
+                <h2>
+                    <a href="http://kociemba.org/cube.htm" target="_blank"
+                        >Cube Explorer</a
+                    >
+                </h2>
+                <figure>
+                    <img
+                        src="./assets/img/CubeExplorer.webp"
+                        alt="Cube Explorer" />
+                    <figcaption>Cube Explorer</figcaption>
+                </figure>
 
-            <p>
-               Use this program by Herbert Koceimba to generate algorithms. Click on a center piece to
-               select that colour, then click on any other peice to paint. Ctrl-click to set
-               orientation, Shift-click for permutation.
-            </p>
-            <p>
-               Click 'Add and Solve' to generate algs that solve that case. Let it run for a few
-               seconds, then click 'Stop Search' and scroll to the top. If one of the first few isn't
-               fingertrick friendly, select all of them and paste them into a Google Doc. You can then
-               use Ctrl+F to search for common triggers like R U R' or R' F R.
-            </p>
+                <p>
+                    Use this program by Herbert Koceimba to generate algorithms.
+                    Click on a center piece to select that colour, then click on
+                    any other peice to paint. Ctrl-click to set orientation,
+                    Shift-click for permutation.
+                </p>
+                <p>
+                    Click 'Add and Solve' to generate algs that solve that case.
+                    Let it run for a few seconds, then click 'Stop Search' and
+                    scroll to the top. If one of the first few isn't fingertrick
+                    friendly, select all of them and paste them into a Google
+                    Doc. You can then use Ctrl+F to search for common triggers
+                    like R U R' or R' F R.
+                </p>
 
-            <p>
-               Tutorials:
-               <a href="https://www.youtube.com/watch?v=uDaNGOigiKg" target="_blank">Java Cuber</a>,
-               <a href="https://www.youtube.com/watch?v=GXBFzIidbWU" target="_blank"
-                  >Rowan Fortier (skip to 12:53)</a
-               >
-            </p>
+                <p>
+                    Tutorials:
+                    <a
+                        href="https://www.youtube.com/watch?v=uDaNGOigiKg"
+                        target="_blank"
+                        >Java Cuber</a
+                    >,
+                    <a
+                        href="https://www.youtube.com/watch?v=GXBFzIidbWU"
+                        target="_blank"
+                        >Rowan Fortier (skip to 12:53)</a
+                    >
+                </p>
 
-            <div class="break"></div>
-         </article>
+                <div class="break"></div>
+            </article>
 
-         <!--Visualcube-->
-         <article>
-            <h2>
-               <a href="http://cube.rider.biz/visualcube.php" target="_blank"> Visualcube </a>
-            </h2>
-            <figure>
-               <img src="./assets/img/visualcube.webp" alt="An Image generated with visualcube" />
-               <figcaption>An SVG generated by Visualcube</figcaption>
-            </figure>
+            <!--Visualcube-->
+            <article>
+                <h2>
+                    <a
+                        href="http://cube.rider.biz/visualcube.php"
+                        target="_blank">
+                        Visualcube
+                    </a>
+                </h2>
+                <figure>
+                    <img
+                        src="./assets/img/visualcube.webp"
+                        alt="An Image generated with visualcube" />
+                    <figcaption>An SVG generated by Visualcube</figcaption>
+                </figure>
 
-            <p>
-               This website by Conrad Rider can generate images of any
-               <span data-tool-tip="2x2, 3x3, 4x4 etc.">NxN</span> puzzle from any angle with any
-               case, using parameters you input into the address bar.
-            </p>
-            <p>
-               Tutorial:
-               <a href="https://www.youtube.com/watch?v=XQs-P3EEVXY" target="_blank">
-                  SomeRandomCuber</a
-               >
-            </p>
+                <p>
+                    This website by Conrad Rider can generate images of any
+                    <span data-tool-tip="2x2, 3x3, 4x4 etc.">NxN</span> puzzle
+                    from any angle with any case, using parameters you input
+                    into the address bar.
+                </p>
+                <p>
+                    Tutorial:
+                    <a
+                        href="https://www.youtube.com/watch?v=XQs-P3EEVXY"
+                        target="_blank">
+                        SomeRandomCuber</a
+                    >
+                </p>
 
-            <div class="break"></div>
-         </article>
+                <div class="break"></div>
+            </article>
 
-         <!--Google Docs and Sheets-->
-         <article>
-            <h2>
-               Google
-               <a href="https://docs.google.com/spreadsheets" target="_blank">Sheets</a>
-               &
-               <a href="https://docs.google.com/" target="_blank">Docs</a>
-            </h2>
-            <figure>
-               <img
-                  src="./assets/img/Sheets.svg"
-                  alt="The Google Sheets logo"
-                  style="padding-right: 5px"
-               />
+            <!--Google Docs and Sheets-->
+            <article>
+                <h2>
+                    Google
+                    <a
+                        href="https://docs.google.com/spreadsheets"
+                        target="_blank"
+                        >Sheets</a
+                    >
+                    &
+                    <a href="https://docs.google.com/" target="_blank">Docs</a>
+                </h2>
+                <figure>
+                    <img
+                        src="./assets/img/Sheets.svg"
+                        alt="The Google Sheets logo"
+                        style="padding-right: 5px" />
 
-               <img src="./assets/img/Docs.svg" alt="The Google Docs logo" style="padding-left: 5px" />
-            </figure>
+                    <img
+                        src="./assets/img/Docs.svg"
+                        alt="The Google Docs logo"
+                        style="padding-left: 5px" />
+                </figure>
 
-            <p>Google Docs is very good for documenting your method. There's not much else to say.</p>
-            <p>
-               Google Sheets, on the other hand, has some very useful functionality. It is mainly used
-               for PB Sheets (see mine in the footer) and showing algorithms.
-            </p>
-            <p>
-               You can use
-               <a href="https://pastebin.com/friL5iQb">this function</a>
-               to show what case an algorithm solves.
-            </p>
-         </article>
-      </main>
+                <p>
+                    Google Docs is very good for documenting your method.
+                    There's not much else to say.
+                </p>
+                <p>
+                    Google Sheets, on the other hand, has some very useful
+                    functionality. It is mainly used for PB Sheets (see mine in
+                    the footer) and showing algorithms.
+                </p>
+                <p>
+                    You can use
+                    <a href="https://pastebin.com/friL5iQb">this function</a>
+                    to show what case an algorithm solves.
+                </p>
+            </article>
+        </main>
 
-      <footer>
-         <ul>
-            <li>About</li>
-            <li><a href="./index.html#about">About Me</a></li>
-            <li><a href="./credits.html">Credits</a></li>
-            <li>
-               <a
-                  href="https://docs.google.com/spreadsheets/d/1kPzSUdBJbyROcFkWn5Qhpjgp5TaZQMddjvGdnvpGtLs/edit?usp=sharing"
-                  target="_blank"
-                  >My PBs</a
-               >
-            </li>
-         </ul>
-         <ul>
-            <li>Contact</li>
-            <li>
-               <a href="mailto:harrison.oreibow@gmail.com">harrison.oreibow@gmail.com</a>
-            </li>
-         </ul>
-         <ul>
-            <li>Find Me</li>
-            <li>
-               <a href="https://github.com/AuthentiCuber" target="_blank">Github</a>
-            </li>
-            <li>
-               <a href="https://www.worldcubeassociation.org/persons/2021OREI01" target="_blank"
-                  >WCA</a
-               >
-            </li>
-            <li><a href="http://www.youtube.com/@HarrisonO" target="_blank">Youtube</a></li>
-            <li><a href="https://codepen.io/Harrison-OReibow" target="_blank">Codepen</a></li>
-         </ul>
-      </footer>
-   </body>
+        <footer>
+            <ul>
+                <li>About</li>
+                <li><a href="./index.html#about">About Me</a></li>
+                <li><a href="./credits.html">Credits</a></li>
+                <li>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1kPzSUdBJbyROcFkWn5Qhpjgp5TaZQMddjvGdnvpGtLs/edit?usp=sharing"
+                        target="_blank"
+                        >My PBs</a
+                    >
+                </li>
+            </ul>
+            <ul>
+                <li>Contact</li>
+                <li>
+                    <a href="mailto:harrison.oreibow@gmail.com"
+                        >harrison.oreibow@gmail.com</a
+                    >
+                </li>
+            </ul>
+            <ul>
+                <li>Find Me</li>
+                <li>
+                    <a href="https://github.com/AuthentiCuber" target="_blank"
+                        >Github</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://www.worldcubeassociation.org/persons/2021OREI01"
+                        target="_blank"
+                        >WCA</a
+                    >
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/@HarrisonO" target="_blank"
+                        >Youtube</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://codepen.io/Harrison-OReibow"
+                        target="_blank"
+                        >Codepen</a
+                    >
+                </li>
+            </ul>
+        </footer>
+    </body>
 </html>
