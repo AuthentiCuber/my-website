@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en-NZ">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Harrison O'Reibow's speedcubing site" />
+        <meta name="keywords" content="Cubing, Speedcubing, Rubiks Cube" />
+        <meta name="author" content="Harrison O'Reibow" />
+
+        <meta name="theme-color" content="#dcdcdc" />
+
+        <!-- Font Awesome -->
+        <script
+            defer
+            src="https://kit.fontawesome.com/75d1f79d1c.js"
+            crossorigin="anonymous"></script>
+
+        <!-- Linked css -->
+        <link rel="preload" as="style" href="../dist/css/styles.css" />
+        <link rel="stylesheet" href="../dist/css/styles.css" />
+
+        <!-- Linked js -->
+        <script defer src="js/main.js"></script>
+
+        <!-- Highlight.js -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+
+        <!-- Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/favicon/apple-touch-icon.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon/favicon-32x32.png" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/favicon/favicon-16x16.png" />
+
+        <title>PostCSS | Harrison O</title>
+    </head>
+    <body>
+        <script src="../js/loadtheme.js"></script>
+
+        <header>
+            <nav>
+                <button aria-label="Open Menu">
+                    <i class="fa-solid fa-bars"></i>
+                    <span>Menu</span>
+                </button>
+                <menu tabindex="-1">
+                    <li class="logo">
+                        <img
+                            src="../assets/favicon/android-chrome-512x512.png"
+                            alt="logo" />
+                        <button class="fa-solid fa-xmark close-menu"></button>
+                    </li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li>
+                        <a href="../cubing/tools.html">Method Dev Tools</a>
+                    </li>
+                    <li>
+                        <a href="#" aria-current="page">PostCSS</a>
+                    </li>
+                </menu>
+            </nav>
+
+            <div id="theme" class="col">
+                <button
+                    aria-label="Theme button"
+                    class="fa-solid fa-moon"
+                    onclick="toggleTheme();"></button>
+                <i class="fa-solid fa-palette"></i>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <section>
+                    <h1>
+                        <a href="https://postcss.org" target="_blank"
+                            >PostCSS</a
+                        >
+                    </h1>
+
+                    <p>
+                        Do you want to use future CSS features in your code
+                        right now? Want to never have to worry about those pesky
+                        vendor prefixes ever again? PostCSS is the answer!
+                    </p>
+                    <p>
+                        In this simple, easy to understand article I will guide
+                        you through setting up and using PostCSS in your
+                        projects.
+                    </p>
+
+                    <div class="break"></div>
+                </section>
+
+                <section>
+                    <h2>Requirements</h2>
+                    <p>
+                        The only thing you need is the latest version of
+                        <a href="https://nodejs.org" target="_blank">Node.js</a
+                        >.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Getting Started</h2>
+                    <p>
+                        First, navigate to your project directory using your
+                        preffered terminal. Next, run the command
+                    </p>
+
+                    <pre><code class="language-shell">npm init -y</code></pre>
+
+                    <p>
+                        This will create a <code>package.json</code> file, which
+                        is required for PostCSS to work. We will come back to
+                        this file later.
+                    </p>
+                    <p>Now run</p>
+
+                    <pre><code class="language-shell">npm install --save-dev postcss postcss-cli</code></pre>
+
+                    <p>
+                        This commmand creates a
+                        <code>node_modules</code> directory, installs PostCSS
+                        and the PostCSS CLI into it, and also creates a
+                        <code>package-lock.json</code> file. We don't need to do
+                        anything with the <code>node_modules</code> folder or
+                        <code>package-lock.json</code>, they are just needed for
+                        PostCSS.
+                    </p>
+
+                    <p>
+                        Next, create a file named
+                        <code>postcss.config.js</code>. In this file we will
+                        list all the PostCSS plugins we install.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Installing plugins</h2>
+                    <p>
+                        You install a plugin (full list of plugins
+                        <a href="https://www.postcss.parts" target="_blank"
+                            >here</a
+                        >) the same way you installed PostCSS and the PostCSS
+                        CLI, like this:
+                    </p>
+
+                    <pre><code class="language-shell">npm install --save-dev &lt;plugin name></code></pre>
+
+                    <p>which can actually be shortened to</p>
+
+                    <pre><code class="language-shell">npm i -D &lt;plugin name></code></pre>
+
+                    <p>
+                        For example, to install the
+                        <a
+                            href="https://github.com/cssnano/cssnano"
+                            target="_blank"
+                            >cssnano</a
+                        >
+                        plugin which minifies your css for faster load times,
+                        you would run:
+                    </p>
+
+                    <pre><code class="language-shell">npm i -D cssnano</code></pre>
+
+                    <p>
+                        then, in the <code>postcss.config.js</code> file add
+                        this boilerplate:
+                    </p>
+
+                    <pre><code class="language-js">module.exports = {
+    map: {},
+    plugins: [
+
+    ],
+};</code></pre>
+
+                    <p>Let's break this down.</p>
+                    <p>
+                        <code>map: {}</code> is where you put the options for
+                        generating
+                        <a href="https://web.dev/source-maps/">source maps</a>.
+                        The only option I change is setting the inline attribute
+                        to false, like this:
+                    </p>
+
+                    <pre><code class="language-js">map: {inline: false}</code></pre>
+
+                    <p>
+                        This disables the default inline source map which is
+                        stored as a base64 encoded string at the bottom of the
+                        output CSS file, and instead creates a separate source
+                        map with the extention
+                        <code>.css.map</code>
+                    </p>
+                    <p>
+                        <code>plugins: []</code> is where you list the plugins
+                        you install, in this format:
+                    </p>
+
+                    <pre><code>plugins: [
+    require("&lt;plugin1>")(),
+    require("&lt;plugin2>")(),
+    etc.
+]</code></pre>
+
+                    <p>
+                        Some plugins have options which you would put in the
+                        second set of brackets, after the plugin name, but many
+                        don't.
+                    </p>
+
+                    <p>
+                        For example if I have installed cssnano and
+                        <a
+                            href="https://github.com/postcss/autoprefixer"
+                            target="_blank"
+                            >autoprefixer</a
+                        >
+                        (which adds vendor prefixes for you), and don't want an
+                        inline source map, my
+                        <code>postcss.config.js</code> file would look like
+                        this:
+                    </p>
+
+                    <pre><code class="language-js">module.exports = {
+    map: {inline: false},
+    plugins: [
+        require("cssnano")(),
+        require("autoprefixer")()
+    ],
+};</code></pre>
+                </section>
+            </article>
+        </main>
+
+        <footer>
+            <ul>
+                <li>About</li>
+                <li><a href="index.html#about">About Me</a></li>
+                <li><a href="credits.html">Credits</a></li>
+                <li>
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1kPzSUdBJbyROcFkWn5Qhpjgp5TaZQMddjvGdnvpGtLs/edit?usp=sharing"
+                        target="_blank"
+                        >My Speedcubing PBs</a
+                    >
+                </li>
+            </ul>
+            <ul>
+                <li>Contact</li>
+                <li>
+                    <a href="mailto:harrison.oreibow@gmail.com"
+                        >harrison.oreibow@gmail.com</a
+                    >
+                </li>
+            </ul>
+            <ul>
+                <li>Find Me</li>
+                <li>
+                    <a href="https://github.com/AuthentiCuber" target="_blank"
+                        >Github</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://www.worldcubeassociation.org/persons/2021OREI01"
+                        target="_blank"
+                        >WCA</a
+                    >
+                </li>
+                <li>
+                    <a href="http://www.youtube.com/@HarrisonO" target="_blank"
+                        >Youtube</a
+                    >
+                </li>
+                <li>
+                    <a
+                        href="https://codepen.io/Harrison-OReibow"
+                        target="_blank"
+                        >Codepen</a
+                    >
+                </li>
+            </ul>
+        </footer>
+        <script>
+            hljs.highlightAll();
+        </script>
+    </body>
+</html>
